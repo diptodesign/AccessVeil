@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live Demo – Clariti</title>
-    <meta name="description" content="See Clariti in action. Try all 20 accessibility modules on this interactive demo page.">
+    <meta name="description" content="See Clariti in action. Try all 18 accessibility modules on this interactive demo page.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        :root {--primary:#0891b2;--bg:#fafcfd;--surface:#fff;--text:#0f172a;--muted:#64748b;--border:#e2e8f0;--radius:20px;}
+        :root {--primary: #0d9488; --primary-dark: #0f766e; --bg: #fafcfd; --surface: #fff; --text: #0f172a; --muted: #64748b; --border: #e2e8f0; --radius: 20px;}
         *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
         body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
         .container{max-width:1200px;margin:0 auto;padding:0 28px}
         .navbar{display:flex;justify-content:space-between;align-items:center;padding:20px 0;flex-wrap:wrap;gap:16px;border-bottom:1px solid var(--border);margin-bottom:40px}
         .logo{display:flex;align-items:center;gap:12px}
-        .logo-icon{width:40px;height:40px;background:linear-gradient(135deg,#0891b2,#06b6d4);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;color:white}
+        .logo-icon{width:40px;height:40px;background:linear-gradient(135deg, var(--primary), var(--primary-dark));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;color:white}
         .logo-text{font-weight:800;font-size:22px}
         .nav-links{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
         .nav-link{padding:8px 16px;border-radius:40px;text-decoration:none;font-weight:600;font-size:14px;color:var(--muted)}
         .nav-link:hover{background:#f1f5f9;color:var(--text)}
-        .btn-envato{background:#82b440;color:white;font-weight:700;padding:10px 22px;border-radius:40px;text-decoration:none;font-size:14px}
+        .btn-envato{background:#82b440;color:white;font-weight:700;padding:10px 22px;border-radius:40px;text-decoration:none;font-size:14px;display:inline-flex;align-items:center;gap:6px}
         h1{font-size:40px;font-weight:800;text-align:center;margin-bottom:8px}
-        .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:40px;font-size:13px;font-weight:600;background:rgba(8,145,178,.08);color:var(--primary);border:1px solid rgba(8,145,178,.15)}
+        .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:40px;font-size:13px;font-weight:600;background:rgba(13,148,136,.08);color:var(--primary);border:1px solid rgba(13,148,136,.15)}
         .demo-frame{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.06);margin:30px 0 60px}
         .browser-bar{background:#f1f5f9;padding:12px 18px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border)}
         .browser-dots{display:flex;gap:6px}.browser-dot{width:10px;height:10px;border-radius:50%}.browser-dot.r{background:#ef4444}.browser-dot.y{background:#f59e0b}.browser-dot.g{background:#10b981}
@@ -38,7 +38,7 @@
         .demo-card{background:#f8fafc;padding:20px;border-radius:12px;text-align:center;border:1px solid var(--border)}
         .demo-card i{font-size:28px;color:var(--primary);margin-bottom:8px;display:block}
         .demo-card h4{font-size:14px;margin-bottom:4px}.demo-card p{font-size:12px;color:var(--muted)}
-        .demo-widget{position:absolute;bottom:24px;right:24px;width:50px;height:50px;background:linear-gradient(135deg,#0891b2,#06b6d4);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:22px;cursor:pointer;box-shadow:0 4px 16px rgba(8,145,178,.3);animation:float 3s ease-in-out infinite}
+        .demo-widget{position:absolute;bottom:24px;right:24px;width:50px;height:50px;background:linear-gradient(135deg, var(--primary), var(--primary-dark));border-radius:14px;display:flex;align-items:center;justify-content:center;color:white;font-size:20px;cursor:pointer;box-shadow:0 4px 16px rgba(13,148,136,.3);animation:float 3s ease-in-out infinite}
         @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
         .preview-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin:50px 0}
         .preview-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px 12px;text-align:center;transition:all .3s}
@@ -57,16 +57,18 @@
         <nav class="navbar">
             <div class="logo"><div class="logo-icon"><i class="fas fa-eye"></i></div><div class="logo-text">Clariti</div></div>
             <div class="nav-links">
-                <a href="index.html" class="nav-link">Home</a><a href="demo.html" class="nav-link" style="background:#f1f5f9;color:var(--text);">Demo</a>
-                <a href="docs.html" class="nav-link">Docs</a><a href="support.html" class="nav-link">Support</a>
-                <a href="https://codecanyon.net/user/diptodesignstock" class="btn-envato"><i class="fas fa-shopping-cart"></i> Buy Now – $39</a>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="demo.html" class="nav-link" style="background:#f1f5f9;color:var(--text);">Demo</a>
+                <a href="docs.html" class="nav-link">Docs</a>
+                <a href="support.html" class="nav-link">Support</a>
+                <a href="https://codecanyon.net/user/diptodesignstock" class="btn-envato"><i class="fas fa-shopping-cart"></i> Buy Now</a>
             </div>
         </nav>
 
         <div style="text-align:center;margin-bottom:30px;">
             <span class="badge"><i class="fas fa-play-circle"></i> Interactive Preview</span>
-            <h1>See Clariti <span style="background:linear-gradient(135deg,#0891b2,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">in Action</span></h1>
-            <p style="color:var(--muted);max-width:500px;margin:0 auto;">This is a simulated demo. On a real WordPress site, click the teal button to open 20 accessibility modules.</p>
+            <h1>See Clariti <span style="background:linear-gradient(135deg, var(--primary), var(--primary-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">in Action</span></h1>
+            <p style="color:var(--muted);max-width:500px;margin:0 auto;">This is a simulated demo. On a real WordPress site, click the eye-icon button to open 18 accessibility modules.</p>
         </div>
 
         <div class="demo-frame">
@@ -75,20 +77,20 @@
                 <div class="demo-site">
                     <div class="demo-nav-links"><a href="#">Home</a><a href="#">About</a><a href="#">Services</a><a href="#">Contact</a></div>
                     <h2>Welcome to Our Website</h2>
-                    <p>This simulated website shows how <strong>Clariti</strong> appears to visitors. The accessibility button at <strong>bottom-right</strong> gives access to 20 modules.</p>
+                    <p>This simulated website shows how <strong>Clariti</strong> appears to visitors. The eye-icon button at <strong>bottom-right</strong> gives access to 18 modules.</p>
                     <div class="demo-cards">
                         <div class="demo-card"><i class="fas fa-text-height"></i><h4>Font Size</h4><p>Adjust text size</p></div>
                         <div class="demo-card"><i class="fas fa-adjust"></i><h4>Contrast</h4><p>Multiple modes</p></div>
-                        <div class="demo-card"><i class="fas fa-ear-listen"></i><h4>Screen Reader</h4><p>Text-to-speech</p></div>
                         <div class="demo-card"><i class="fas fa-moon"></i><h4>Dark Mode</h4><p>Low-light viewing</p></div>
+                        <div class="demo-card"><i class="fas fa-eye-dropper"></i><h4>Color Blind</h4><p>3 filter types</p></div>
                     </div>
-                    <p style="font-size:14px;">All images include <strong title="This tooltip is enhanced by Clariti">enhanced tooltips</strong>. Links are highlighted. Keyboard navigation works seamlessly.</p>
+                    <p style="font-size:14px;">All 18 modules work instantly. <strong title="Enhanced tooltips by Clariti">Hover tooltips</strong>, highlighted links, and keyboard navigation are all part of the package.</p>
                 </div>
                 <div class="demo-widget" title="Accessibility Options — Click to Open"><i class="fas fa-eye"></i></div>
             </div>
         </div>
 
-        <h2 style="text-align:center;margin-bottom:30px;">All <span style="background:linear-gradient(135deg,#0891b2,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">20 Modules</span></h2>
+        <h2 style="text-align:center;margin-bottom:30px;">All <span style="background:linear-gradient(135deg, var(--primary), var(--primary-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">18 Modules</span></h2>
         <div class="preview-grid">
             <div class="preview-card"><i class="fas fa-text-height"></i><span>Font Size</span></div>
             <div class="preview-card"><i class="fas fa-text-width"></i><span>Text Spacing</span></div>
@@ -102,21 +104,19 @@
             <div class="preview-card"><i class="fas fa-mouse-pointer"></i><span>Big Cursor</span></div>
             <div class="preview-card"><i class="fas fa-highlighter"></i><span>Highlight Links</span></div>
             <div class="preview-card"><i class="fas fa-vector-square"></i><span>Focus Mode</span></div>
-            <div class="preview-card"><i class="fas fa-keyboard"></i><span>Keyboard Nav</span></div>
             <div class="preview-card"><i class="fas fa-grip-lines"></i><span>Reading Line</span></div>
             <div class="preview-card"><i class="fas fa-mask"></i><span>Reading Mask</span></div>
-            <div class="preview-card"><i class="fas fa-ear-listen"></i><span>Screen Reader</span></div>
-            <div class="preview-card"><i class="fas fa-comment-dots"></i><span>Tooltips</span></div>
-            <div class="preview-card"><i class="fas fa-pause-circle"></i><span>Stop Animations</span></div>
+            <div class="preview-card"><i class="fas fa-border-all"></i><span>Page Structure</span></div>
+            <div class="preview-card"><i class="fas fa-highlighter"></i><span>Reading Guide</span></div>
+            <div class="preview-card"><i class="fas fa-pause-circle"></i><span>Pause Animations</span></div>
             <div class="preview-card"><i class="fas fa-image"></i><span>Hide Images</span></div>
-            <div class="preview-card"><i class="fas fa-closed-captioning"></i><span>Show Alt Text</span></div>
         </div>
 
         <div style="text-align:center;margin:50px 0;">
-            <a href="https://codecanyon.net/user/diptodesignstock" style="background:var(--primary);color:white;font-weight:700;padding:16px 36px;border-radius:60px;text-decoration:none;font-size:16px;display:inline-flex;align-items:center;gap:8px;"><i class="fab fa-envato"></i> Get Clariti – $39</a>
+            <a href="https://codecanyon.net/user/diptodesignstock" style="background:var(--primary);color:white;font-weight:700;padding:16px 36px;border-radius:60px;text-decoration:none;font-size:16px;display:inline-flex;align-items:center;gap:8px;"><i class="fab fa-envato"></i> Get Clariti</a>
         </div>
 
-        <footer class="footer"><div class="footer-grid"><div class="footer-brand" style="display:flex;align-items:center;gap:10px;"><div style="width:28px;height:28px;background:linear-gradient(135deg,#0891b2,#06b6d4);border-radius:8px;display:flex;align-items:center;justify-content:center;"><i class="fas fa-eye" style="color:white;font-size:14px;"></i></div><span style="font-weight:700;">Clariti by <a href="https://diptodesign.com" style="color:var(--primary);">Dipto Design</a></span></div><div class="footer-links"><a href="index.html">Home</a><a href="docs.html">Docs</a><a href="support.html">Support</a><a href="contact.html">Contact</a></div><div class="footer-copy">© 2026 Dipto Design</div></div></footer>
+        <footer class="footer"><div class="footer-grid"><div class="footer-brand" style="display:flex;align-items:center;gap:10px;"><div style="width:28px;height:28px;background:linear-gradient(135deg, var(--primary), var(--primary-dark));border-radius:8px;display:flex;align-items:center;justify-content:center;"><i class="fas fa-eye" style="color:white;font-size:14px;"></i></div><span style="font-weight:700;">Clariti by <a href="https://codecanyon.net/user/diptodesignstock" style="color:var(--primary);">Dipto Design</a></span></div><div class="footer-links"><a href="index.html">Home</a><a href="docs.html">Docs</a><a href="support.html">Support</a><a href="contact.html">Contact</a></div><div class="footer-copy">© 2026 Dipto Design</div></div></footer>
     </div>
 </body>
 </html>
